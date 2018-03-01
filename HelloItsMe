@@ -12,7 +12,7 @@ namespace HelloItsMe
     /// </summary>
     static void Main()
     {
-      Console.WriteLine("My name is Nastassia Zhylinskaya.\nI am study at 3 course, 4 group.\nI'm glad to see you again.");     
+      Console.WriteLine("My name is Nastassia Zhylinskaya.\nI am study at 3 course, 4 group.\nI'm glad to see you again.");
     }
   }
 }
