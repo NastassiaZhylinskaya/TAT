@@ -8,13 +8,14 @@ namespace TaskDev1
     {
       if (symbolsString.Length == 1)
       {
-        Sequence sequence = new Sequence(symbolsString[0]);
-        Console.WriteLine(sequence.FindLongestSameSymbols());
+        SequenceOfString sequence = new SequenceOfString(symbolsString[0]);
+        Console.WriteLine(sequence.FindMaxLengthSameSymbols());
       }
       else
       {
-        Console.WriteLine("Wrong arguments.");
+        Console.WriteLine("Wrong number of arguments.");
       }
     }
   }
 }
+
