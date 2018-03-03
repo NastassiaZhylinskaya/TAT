@@ -32,6 +32,7 @@ namespace TaskDev1
         if (maxSameStringLength < currentSequenceLength)
         {
           maxSameStringLength = currentSequenceLength;
+          maxSameStringLength++;
         }                
       } 
      return maxSameStringLength;
