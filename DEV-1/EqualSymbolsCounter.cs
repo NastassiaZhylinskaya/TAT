@@ -7,19 +7,16 @@ namespace TaskDev1
   /// count max length of equal symbols.
   /// </summary>
   class EqualSymbolsCounter
-  {
-    /// <summary>
-    /// This method gets console arguments.
-    /// </summary>
+  {    
     public EqualSymbolsCounter(string ourString)
     {  
        currentString = ourString;
     }
     private string currentString;
     /// <summary>
-    /// This method for find max length same symbols.
+    /// This method for finds max length of idential symbols.
     /// </summary>
-    /// <returns>Returns the maximum number duplicate successive symbols.</returns>
+    /// <returns>Returns the maximum number of duplicate successive symbols.</returns>
     public int FindSimilarSimbolsSequanceLength()
     {  
        int maxSameStringLength = 1;
