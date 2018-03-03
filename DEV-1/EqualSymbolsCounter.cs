@@ -3,7 +3,7 @@ using System;
 namespace TaskDev1
 {
   /// <summary>
-  /// This class for work with string and
+  /// This class works with string and
   /// count max length of equal symbols.
   /// </summary>
   class EqualSymbolsCounter
