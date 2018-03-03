@@ -13,7 +13,7 @@ namespace TaskDev1
        currentString = ourString;
     }
     private string currentString;
-    /// <summary>
+    /// <summary> 
     /// This method finds max length of idential symbols.
     /// </summary>
     /// <returns>Returns the maximum number of duplicate successive symbols.</returns>
