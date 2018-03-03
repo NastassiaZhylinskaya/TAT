@@ -24,7 +24,7 @@ namespace TaskDev1
     public int FindMaxLengthSameSymbols()
     {
       int maxSameStringLength = 1;
-      int currentSequenceLength = 0;
+      int currentSequenceLength = 1;
       char theFirstSymbol;
       for (int i = 0; i < currentString.Length - 1; i++)
       {
@@ -35,12 +35,11 @@ namespace TaskDev1
         }
         else
         {
-          currentSequenceLength = 0;
+          currentSequenceLength = 1;
         }
         if (maxSameStringLength < currentSequenceLength)
         {
-          maxSameStringLength = currentSequenceLength;
-          maxSameStringLength++;
+          maxSameStringLength = currentSequenceLength;          
         }                
       } 
      return maxSameStringLength;
