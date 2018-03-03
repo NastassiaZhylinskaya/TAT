@@ -11,7 +11,7 @@ namespace TaskDev1
     {
       if (symbolsString.Length == 1)
       {
-        Counter counter = new Counter(symbolsString[0]);
+        CounterOfEqualSymbols counter = new CounterOfEqualSymbols(symbolsString[0]);
         Console.WriteLine(counter.FindMaxLengthSameSymbols());
       }
       else
