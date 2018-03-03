@@ -4,9 +4,9 @@ namespace TaskDev1
 {
   /// <summary>
   /// This class for work with string and
-  /// find max length same symbols.
+  /// count max length same symbols.
   /// </summary>
-  class SequenceOfString
+  class Counter
   {  
     private string currentString;
    /// <summary>
@@ -17,30 +17,30 @@ namespace TaskDev1
     {
       int maxSameStringLength = 0;
       int currentSequenceLength = 0;
-      char theFirstSymbol = currentString[0];
+      char theFirstSymbol;
       for (int i = 0; i < currentString.Length - 1; i++)
       {
+        theFirstSymbol = currentString[i];
         if (theFirstSymbol == currentString[i + 1])
         {
           currentSequenceLength++;
-          if (maxSameStringLength < currentSequenceLength)
-          {
-            maxSameStringLength = currentSequenceLength;
-          }
         }
         else
         {
-          theFirstSymbol = currentString[i + 1];
           currentSequenceLength = 0;
-        }        
+        }
+        if (maxSameStringLength < currentSequenceLength)
+        {
+          maxSameStringLength = currentSequenceLength;
+        }                
       } 
      return maxSameStringLength;
-    }    
+    }
     /// <summary>
     /// This method gets console arguments.
     /// </summary>
     /// <param name="ourString">return our string.</param>     
-    public SequenceOfString(string ourString)
+    public Counter(string ourString)
     {
       currentString = ourString;
     }
