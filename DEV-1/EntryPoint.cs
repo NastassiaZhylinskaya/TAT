@@ -8,11 +8,11 @@ namespace TaskDev1
   class EntryPoint
   {    
     static void Main(string[] symbolsString)
-    {
+    { 
       if (symbolsString.Length == 1)
       {
-        CounterOfEqualSymbols counter = new CounterOfEqualSymbols(symbolsString[0]);
-        Console.WriteLine(counter.FindMaxLengthSameSymbols());
+        EqualSymbolsCounter counter = new EqualSymbolsCounter(symbolsString[0]);
+        Console.WriteLine(counter.FindSimilarSimbolsSequanceLength());
       }
       else
       {
@@ -20,4 +20,4 @@ namespace TaskDev1
       }
     }
   }
-}
+ }
