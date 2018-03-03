@@ -14,7 +14,7 @@ namespace TaskDev1
     }
     private string currentString;
     /// <summary>
-    /// This method for finds max length of idential symbols.
+    /// This method finds max length of idential symbols.
     /// </summary>
     /// <returns>Returns the maximum number of duplicate successive symbols.</returns>
     public int FindSimilarSimbolsSequanceLength()
