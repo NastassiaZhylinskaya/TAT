@@ -10,7 +10,7 @@ namespace DEV_2
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Enter your string.");
+      Console.WriteLine("Enter your string..");
       string currentString = Console.ReadLine();
       StringBuilder newStringBuilder = new StringBuilder();
       for (int i = 0; i < currentString.Length; i = i + 2)
