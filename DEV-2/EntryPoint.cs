@@ -10,9 +10,14 @@ namespace DEV_2
   {
     static void Main(string[] args)
     {
-        string currentString = Console.ReadLine();
-        EvenIndicesFinder finder  = new EvenIndicesFinder(currentString);
-        Console.WriteLine(finder.GetEvenIndices());
+      Console.WriteLine("Enter your string.");
+      string currentString = Console.ReadLine();
+      StringBuilder newStringBuilder = new StringBuilder();
+      for (int i = 0; i < currentString.Length; i = i + 2)
+      {
+        newStringBuilder.Append(currentString[i]);
+      }       
+      Console.WriteLine(newStringBuilder);
     }
   }
 }
