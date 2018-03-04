@@ -9,14 +9,19 @@ namespace DEV_2
   class EntryPoint
   {
     static void Main(string[] args)
-    {
-      Console.WriteLine("Enter your string..");
+    {      
+      Console.WriteLine("Enter your string:");
       string currentString = Console.ReadLine();
+      while (currentString.Length == 0)
+      {
+        Console.WriteLine("String length is null, repeat please.");
+        currentString = Console.ReadLine();
+      }
       StringBuilder newStringBuilder = new StringBuilder();
-      for (int i = 0; i < currentString.Length; i = i + 2)
+      for (int i = 0; i < currentString.Length; i += 2)
       {
         newStringBuilder.Append(currentString[i]);
-      }       
+      }
       Console.WriteLine(newStringBuilder);
     }
   }
