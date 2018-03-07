@@ -1,29 +1,29 @@
-﻿using System;
+using System;
 
 namespace NumberRadixConvertion
 {
   /// <summary>
   /// This class for converting decimal number
-  /// to another numeral system from 2 to 20.
+  /// to other numeral system from 2 to 20.
   /// </summary>
   public class DecimalNumberRadixConvertor
   {
-    const int ASCIISYMBOL = 55;
-    public int SourceNumber { get; private set; }
+    const int LATIN_SYMBOLS_START_POSITION = 55;
+    public BigInteger SourceNumber { get; private set; }
         
-    public DecimalNumberRadixConvertor(int sourceNumber)
+    public DecimalNumberRadixConvertor(BigInteger sourceNumber)
     {
       SourceNumber = sourceNumber;      
     }
     /// <summary>
-    /// This method convert decimal number
-    /// to another numeral system.
+    /// This method converts decimal number
+    /// to other numeral system.
     /// </summary>
     /// <param name="radix">base numeral system.</param>
     /// <returns>converted string.</returns>
     public string ConvertTo(int radix)
     {
-      int sourceNumber = SourceNumber;
+      BigInteger sourceNumber = SourceNumber;
       string convertedNumberString = String.Empty;
       if (0 == sourceNumber)
       {
@@ -33,7 +33,7 @@ namespace NumberRadixConvertion
       {
         int rest = sourceNumber % radix;
         sourceNumber = sourceNumber / radix;
-        int asciSymbolFirstPosition = (rest >= 10) ? ASCIISYMBOL : '0';
+        int asciSymbolFirstPosition = (rest >= 10) ? LATIN_SYMBOLS_START_POSITION : '0';
         convertedNumberString = (char)(asciSymbolFirstPosition + rest) + convertedNumberString;
       }
       return convertedNumberString;      
