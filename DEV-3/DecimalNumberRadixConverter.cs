@@ -1,5 +1,5 @@
-using System;
-using System.Numerics;
+﻿using System;
+
 
 namespace NumberRadixConvertion
 {
@@ -10,11 +10,11 @@ namespace NumberRadixConvertion
   public class DecimalNumberRadixConvertor
   {
     const int LATIN_SYMBOLS_START_POSITION = 55;
-    public BigInteger SourceNumber { get; private set; }
-        
-    public DecimalNumberRadixConvertor(BigInteger sourceNumber)
+    public int SourceNumber { get; set; }
+
+    public DecimalNumberRadixConvertor(int sourceNumber)
     {
-      SourceNumber = sourceNumber;      
+      SourceNumber = sourceNumber;
     }
     /// <summary>
     /// This method converts decimal number
@@ -24,11 +24,19 @@ namespace NumberRadixConvertion
     /// <returns>converted string.</returns>
     public string ConvertTo(int radix)
     {
-      BigInteger sourceNumber = SourceNumber;
+      int sourceNumber = SourceNumber;
       string convertedNumberString = String.Empty;
       if (0 == sourceNumber)
       {
         return sourceNumber.ToString();
+      }
+      if (radix < 2 || radix > 20)
+      {
+        throw new ArgumentException();
+      }
+      if (sourceNumber < 0)
+      {
+        throw new ArgumentException();
       }
       while (sourceNumber > 0)
       {
