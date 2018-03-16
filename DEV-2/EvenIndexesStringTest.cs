@@ -1,48 +1,49 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
+using DEV_2;
 
 namespace DEV_2.Test
 {
-  [TestClass]
   public class EvenIndexesStringTest
   {
-    [TestMethod]
-    public void UnEvenStringLengthTestPositive()
+    [Fact]
+    public void TUnEvenStringLengthTestPositive()
     {
       string currentString = "kovalchuk";
       string expected = "kvlhk";
       EvenIndexesString stringCreator = new EvenIndexesString();
       string actual = stringCreator.CreateEvenIndexesString(currentString);
-      Assert.AreEqual(expected, actual);      
+      Assert.Equal(expected, actual); 
     }
 
-    [TestMethod]
+    [Fact]
     public void EvenStringLengthTestPositive()
     {
       string currentString = "kovalchukk";
       string expected = "kvlhk";
       EvenIndexesString stringCreator = new EvenIndexesString();
       string actual = stringCreator.CreateEvenIndexesString(currentString);
-      Assert.AreEqual(expected, actual);
+      Assert.Equal(expected, actual);
     }
 
-    [TestMethod]
+    [Fact]
     public void NullStringLengthPositive()
     {
       string currentString = "";
       string expected = "";
       EvenIndexesString stringCreator = new EvenIndexesString();
       string actual = stringCreator.CreateEvenIndexesString(currentString);
-      Assert.AreEqual(expected, actual);
+      Assert.Equal(expected, actual);
     }
-    [TestMethod]
+
+    [Fact]
     public void OneStringLengthPositive()
     {
       string currentString = "a";
       string expected = "a";
       EvenIndexesString stringCreator = new EvenIndexesString();
       string actual = stringCreator.CreateEvenIndexesString(currentString);
-      Assert.AreEqual(expected, actual);
+      Assert.Equal(expected, actual);
     }
   }
 }
