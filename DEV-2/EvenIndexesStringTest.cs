@@ -7,7 +7,7 @@ namespace DEV_2.Test
   public class EvenIndexesStringTest
   {
     [Fact]
-    public void TUnEvenStringLengthTestPositive()
+    public void UnEvenStringLengthTestPositive()
     {
       string currentString = "kovalchuk";
       string expected = "kvlhk";
