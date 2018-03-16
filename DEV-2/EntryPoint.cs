@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Text;
 
 namespace DEV_2
@@ -11,18 +11,18 @@ namespace DEV_2
     static void Main(string[] args)
     {      
       Console.WriteLine("Enter your string:");
-      string currentString = Console.ReadLine();
-      while (currentString.Length == 0)
+      string currentString;
+      do
       {
-        Console.WriteLine("String length is null, repeat please.");
         currentString = Console.ReadLine();
+        if (currentString == string.Empty)
+        {
+          Console.WriteLine("String length is null, repeat please.");
+        }
       }
-      StringBuilder newStringBuilder = new StringBuilder();
-      for (int i = 0; i < currentString.Length; i += 2)
-      {
-        newStringBuilder.Append(currentString[i]);
-      }
-      Console.WriteLine(newStringBuilder);
+      while (currentString == string.Empty);      
+      EvenIndexesString finder = new EvenIndexesString();
+      Console.WriteLine(finder.CreateEvenIndexesString(currentString));
     }
   }
 }
